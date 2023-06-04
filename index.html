@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form action="/">
+      <fieldset>
+        <legend>Registration</legend>
+        <div>
+          <label for="username">Username</label>
+          <input
+            id="username"
+            name="username"
+            type="text"
+            placeholder="max 10 characters"
+            maxlength="10"
+            minlength="4"
+          />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="password"
+            maxlength="5"
+            required
+          />
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Message"
+            maxlength="20"
+            disabled
+          ></textarea>
+        </div>
+        <div>
+          <label for="terms">Terms</label>
+          <input id="terms" name="terms" type="checkbox" />
+          <label for="service">Service</label>
+          <input id="service" name="service" type="checkbox" />
+        </div>
+        <div>
+          <label for="cat">Cat</label>
+          <input id="cat" type="radio" name="animal" />
+          <label for="dog">Dog</label>
+          <input id="dog" type="radio" name="animal" />
+          <label for="parrot">Parrot</label>
+          <input id="parrot" type="radio" name="animal" />
+          <label for="fish">Fish</label>
+          <input id="fish" type="radio" name="animal" />
+        </div>
+        <div>
+          <select name="day-of-week" required>
+            <option value="">---Please select day of the week---</option>
+            <option value="mon">Mon</option>
+            <option value="tue">Tue</option>
+            <option value="wed">Wed</option>
+            <option value="thu">Thu</option>
+            <option value="fri">Fri</option>
+          </select>
+        </div>
+        <button type="submit">Submit</button>
+      </fieldset>
+      <div>
+        <div>
+          <!-- correct usage of input type="range" -->
+          <input type="range" min="15" max="25" step="5" name="test1" />
+          <!-- incorrect usage of input type="range" -->
+          <input
+            type="range"
+            maxlength="25"
+            minlength="15"
+            step="5"
+            name="test2"
+          />
+        </div>
+        <div>
+          <!-- correct usage of input type="date" -->
+          <input name="test3" type="date" min="2023-06-04" max="2023-06-30" />
+          <!-- incorrect usage of input type="date" -->
+          <input name="test4" type="date" min="04.06.2023" max="30.06.2023" />
+        </div>
+        <div>
+          <!-- correct usage of input type="number" -->
+          <input type="number" required step="5" min="5" max="100" />
+          <!-- correct usage of input type="number" -->
+          <input type="number" required step="5" min="5" max="100" />
+          <!-- correct usage of input type="number" -->
+          <input type="number" min="5" max="100" step="5" />
+          <!-- correct usage of input type="number" -->
+          <input type="number" max="100" min="5" />
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
+
+<!-- ::placeholder -->
